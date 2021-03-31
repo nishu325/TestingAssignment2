@@ -6,15 +6,14 @@ namespace TestProjectAssignment2
     public class TestMyExtension
     {
         [Theory]
-        [InlineData("COMPUTER","computer")]
+        [InlineData("COMPUTER", "computer")]
         [InlineData("MOBILE", "mobile")]
         [InlineData("HAPPY", "happy")]
-        public void TestPositive_ChangeToLowerCase(string input,string output)
+        public void TestPositive_ChangeToLowerCase(string input, string output)
         {
-            
-            //Act
+            // Act
             var result = MyExtension.ChangeToLowerCase(input);
-            //Asseret
+            // Asseret
             Assert.Equal(output, result);
         }
         [Theory]
@@ -22,12 +21,10 @@ namespace TestProjectAssignment2
         [InlineData("MOBILE", "MOBILE")]
         [InlineData("HAPPY", "HAPPY")]
         public void TestNegative_ChangeToLowerCase(string input, string output)
-        {           
-            //Arrange
-            
-            //Act
+        {
+            // Act
             var result = MyExtension.ChangeToLowerCase(input);
-            //Asseret
+            // Asseret
             Assert.NotEqual(output, result);
         }
         [Theory]
@@ -36,11 +33,9 @@ namespace TestProjectAssignment2
         [InlineData("happy", "HAPPY")]
         public void TestPositive_ChangeToUpperCase(string input, string output)
         {
-            //Arrange
-            
-            //Act
+            // Act
             var result = MyExtension.ChangeToUpperCase(input);
-            //Asseret
+            // Asseret
             Assert.Equal(output, result);
         }
         [Theory]
@@ -49,11 +44,9 @@ namespace TestProjectAssignment2
         [InlineData("happy", "happy")]
         public void TestNegative_ChangeToUpperCase(string input, string output)
         {
-            //Arrange
-          
-            //Act
+            // Act
             var result = MyExtension.ChangeToUpperCase(input);
-            //Asseret
+            // Asseret
             Assert.NotEqual(output, result);
         }
         [Theory]
@@ -62,11 +55,9 @@ namespace TestProjectAssignment2
         [InlineData("happy birthday", "Happy Birthday")]
         public void TestPositive_changeToTitleCase(string input, string output)
         {
-            //Arrange
-
-            //Act
+            // Act
             var result = MyExtension.ChangeToTitleCase(input);
-            //Asseret
+            // Asseret
             Assert.Equal(output, result);
         }
         [Theory]
@@ -75,11 +66,9 @@ namespace TestProjectAssignment2
         [InlineData("happy birthday", "hapPy birThday")]
         public void TestNegative_changeToTitleCase(string input, string output)
         {
-            //Arrange
-
-            //Act
+            // Act
             var result = MyExtension.ChangeToTitleCase(input);
-            //Asseret
+            // Asseret
             Assert.NotEqual(output, result);
         }
         [Theory]
@@ -88,11 +77,9 @@ namespace TestProjectAssignment2
         [InlineData("happy", "Happy")]
         public void TestPositive_FirstLetterCapital(string input, string output)
         {
-            //Arrange
-            
-            //Act
+            // Act
             var result = MyExtension.FirstLetterCapital(input);
-            //Asseret
+            // Asseret
             Assert.Equal(output, result);
         }
         [Theory]
@@ -101,11 +88,9 @@ namespace TestProjectAssignment2
         [InlineData("happy", "happY")]
         public void TestNegative_FirstLetterCapital(string input, string output)
         {
-            //Arrange
-           
-            //Act
+            // Act
             var result = MyExtension.FirstLetterCapital(input);
-            //Asseret
+            // Asseret
             Assert.NotEqual(output, result);
         }
         [Theory]
@@ -114,11 +99,9 @@ namespace TestProjectAssignment2
         [InlineData("5800014", true)]
         public void TestPositive_FindStrToNum(string input, bool output)
         {
-            //Arrange
-            
-            //Act
+            // Act
             var result = MyExtension.FindStrToNum(input);
-            //Asseret
+            // Asseret
             Assert.True(output);
         }
         [Theory]
@@ -127,11 +110,9 @@ namespace TestProjectAssignment2
         [InlineData("580001a.4", false)]
         public void TestNegative_FindStrToNum(string input, bool output)
         {
-            //Arrange
-           
-            //Act
+            // Act
             var result = MyExtension.FindStrToNum(input);
-            //Asseret
+            // Asseret
             Assert.False(output);
         }
         [Theory]
@@ -140,11 +121,9 @@ namespace TestProjectAssignment2
         [InlineData("happy", "happ")]
         public void TestPositive_RemoveLastChar(string input, string output)
         {
-            //Arrange
-           
-            //Act
+            // Act
             var result = MyExtension.RemoveLastChar(input);
-            //Asseret
+            // Asseret
             Assert.Equal(output, result);
         }
         [Theory]
@@ -153,11 +132,9 @@ namespace TestProjectAssignment2
         [InlineData("happy", "hapy")]
         public void TestNegative_RemoveLastChar(string input, string output)
         {
-            //Arrange
-            
-            //Act
+            // Act
             var result = MyExtension.RemoveLastChar(input);
-            //Asseret
+            // Asseret
             Assert.NotEqual(output, result);
         }
         [Theory]
@@ -166,11 +143,9 @@ namespace TestProjectAssignment2
         [InlineData("enjoy this food", 3)]
         public void TestPositive_TotalCount(string input, int output)
         {
-            //Arrange
-            
-            //Act
+            // Act
             int result = MyExtension.TotalCount(input);
-            //Asseret
+            // Asseret
             Assert.Equal(output, result);
         }
         [Theory]
@@ -179,71 +154,69 @@ namespace TestProjectAssignment2
         [InlineData("enjoy this food", 7)]
         public void TestNegative_TotalCount(string input, int output)
         {
-            //Arrange
-           
-            //Act
+            // Act
             var result = MyExtension.TotalCount(input);
-            //Asseret
+            // Asseret
             Assert.NotEqual(output, result);
         }
         [Fact]
         public void Test_All_LowerCase_FindLowerCaseChar()
         {
-            //Arrange
+            // Arrange
             var arrange = "mobile";
-            //Act
+            // Act
             var result = MyExtension.FindLowerCaseChar(arrange);
-            //Asseret
-            Assert.Equal("All are in lowercase.",result);
+            // Asseret
+            Assert.Equal("All are in lowercase.", result);
         }
         [Fact]
         public void Test_Some_Not_In_LowerCase_FindLowerCaseChar()
         {
-            //Arrange
+            // Arrange
             var arrange = "MobiLe";
-            //Act
+            // Act
             var result = MyExtension.FindLowerCaseChar(arrange);
-            //Asseret
+            // Asseret
             Assert.Equal("There are only 2 character in uppercase", result);
         }
         [Fact]
         public void Test_All_UpperCase_FindUpperCaseChar()
         {
-            //Arrange
+            // Arrange
             var arrange = "MOBILE";
-            //Act
+            // Act
             var result = MyExtension.FindUpperCaseChar(arrange);
-            //Asseret
+            // Asseret
             Assert.Equal("All are in uppercase.", result);
         }
         [Fact]
         public void Test_Some_Not_In_UpperCase_FindUpperCaseChar()
         {
-            //Arrange
+            // Arrange
             var arrange = "MobiLE";
-            //Act
+            // Act
             var result = MyExtension.FindUpperCaseChar(arrange);
-            //Asseret
+            // Asseret
             Assert.Equal("There are only 3 character in lower", result);
         }
         [Fact]
         public void TestPositive_ConvertStrToInt()
         {
-            //Arrange
+            // Arrange
             var arrange = "12345";
-            //Act
+            // Act
             var result = MyExtension.ConvertStrToInt(arrange);
-            //Asseret
+            // Asseret
             Assert.Equal(12345, result);
         }
         [Fact]
         public void TestNegative_ConvertStrToInt()
         {
-            //Arrange
+            // Arrange
             var arrange = "123451";
-            //Act
+            // Act
             var result = MyExtension.ConvertStrToInt(arrange);
-            //Asseret
+            // Asseret
             Assert.NotEqual(12345, result);
         }
     }

@@ -1386,11 +1386,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NISHU\\source\\repos\\TestProjectAssignment2\\TestProjectAssignment2.csproj",
+      "projectUniqueName": "D:\\TestingAssignment2 GitHub repo\\TestingAssignment2\\Project\\TestProjectAssignment2\\TestProjectAssignment2.csproj",
       "projectName": "TestProjectAssignment2",
-      "projectPath": "C:\\Users\\NISHU\\source\\repos\\TestProjectAssignment2\\TestProjectAssignment2.csproj",
+      "projectPath": "D:\\TestingAssignment2 GitHub repo\\TestingAssignment2\\Project\\TestProjectAssignment2\\TestProjectAssignment2.csproj",
       "packagesPath": "C:\\Users\\NISHU\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NISHU\\source\\repos\\TestProjectAssignment2\\obj\\",
+      "outputPath": "D:\\TestingAssignment2 GitHub repo\\TestingAssignment2\\Project\\TestProjectAssignment2\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1407,8 +1407,8 @@
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "C:\\Users\\NISHU\\source\\repos\\TestingAssignment2\\TestingAssignment2.csproj": {
-              "projectPath": "C:\\Users\\NISHU\\source\\repos\\TestingAssignment2\\TestingAssignment2.csproj"
+            "D:\\TestingAssignment2 GitHub repo\\TestingAssignment2\\Project\\TestingAssignment2\\TestingAssignment2.csproj": {
+              "projectPath": "D:\\TestingAssignment2 GitHub repo\\TestingAssignment2\\Project\\TestingAssignment2\\TestingAssignment2.csproj"
             }
           }
         }

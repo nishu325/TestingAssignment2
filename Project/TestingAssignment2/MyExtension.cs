@@ -5,10 +5,13 @@ namespace TestingAssignment2
 {
     public static class MyExtension
     {
-
+        /// <summary>
+        /// Change lowercase from uppercase
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return lowercase string.</returns>
         public static string ChangeToLowerCase(this string input)
         {
-
             String output = "";
             for (int i = 0; i < input.Length; i++)
             {
@@ -20,11 +23,14 @@ namespace TestingAssignment2
                     output += input[i];
             }
             return output;
-
         }
+        /// <summary>
+        /// Change to uppercase
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return uppercase string.</returns>
         public static string ChangeToUpperCase(this string input)
         {
-
             String output = "";
             for (int i = 0; i < input.Length; i++)
             {
@@ -36,22 +42,29 @@ namespace TestingAssignment2
                     output += input[i];
             }
             return output;
-
         }
+        /// <summary>
+        /// Change string to title case
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return string in title case letter</returns>
         public static string ChangeToTitleCase(this string input)
         {
             TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
             var output = textInfo.ToTitleCase(input);
             return output;
         }
+        /// <summary>
+        /// Find lowercase character in string
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return no. of lowercase letters.</returns>
         public static string FindLowerCaseChar(this string input)
         {
             int count = 0;
             for (int i = 0; i < input.Length; i++)
             {
-                char c = input[i];
-
-
+                //char c = input[i];
                 if (input[i] >= 'A' && input[i] <= 'Z')
                 {
                     count++;
@@ -59,7 +72,6 @@ namespace TestingAssignment2
                 else
                     continue;
             }
-
             if (count != 0)
             {
                 return "There are only " + count + " character in uppercase";
@@ -68,8 +80,12 @@ namespace TestingAssignment2
             {
                 return "All are in lowercase.";
             }
-
         }
+        /// <summary>
+        /// Change first letter into capital letter
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return string with first letter capital letter</returns>
         public static string FirstLetterCapital(this string input)
         {
             if (input.Length > 0)
@@ -90,12 +106,16 @@ namespace TestingAssignment2
                 return input;
             }
         }
+        /// <summary>
+        /// Find total uppercase letters in string.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return no. of uppercase letters.</returns>
         public static string FindUpperCaseChar(this string input)
         {
             int count = 0;
             for (int i = 0; i < input.Length; i++)
-            {
-                
+            {                
                 if (input[i] >= 'a' && input[i] <= 'z')
                 {
                     count++;
@@ -111,8 +131,12 @@ namespace TestingAssignment2
             {
                 return "All are in uppercase.";
             }
-
         }
+        /// <summary>
+        /// Convert string to int
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return true if possible otherwise return false.</returns>
         public static bool FindStrToNum(this string input)
         {
             int no = 0;
@@ -120,6 +144,11 @@ namespace TestingAssignment2
             return convertToNo;
 
         }
+        /// <summary>
+        /// Remove last character from string. 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return string without last character.</returns>
         public static string RemoveLastChar(this string input)
         {
             string output = "";
@@ -129,6 +158,11 @@ namespace TestingAssignment2
             }
             return output;
         }
+        /// <summary>
+        /// Give the totla word in the input.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Return no. of words in the string.</returns>
         public static int TotalCount(this string input)
         {
             int l = 0;
@@ -144,6 +178,11 @@ namespace TestingAssignment2
             }
             return wrd;
         }
+        /// <summary>
+        /// Try to convert string to int.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>It shuold return result of string.</returns>
         public static int ConvertStrToInt(this string input)
         {
             int outputData = int.Parse(input);
